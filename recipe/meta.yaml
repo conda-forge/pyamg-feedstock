@@ -5,9 +5,7 @@ package:
     version: {{ version }}
 
 source:
-    fn: pyamg-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/p/pyamg/pyamg-{{ version }}.tar.gz
-    md5: a766393c628c29696d31b3dbbdb6e008
+    url: https://github.com/pyamg/pyamg/archive/v{{ version }}.tar.gz
 
 build:
     number: 0
