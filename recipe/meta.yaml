@@ -25,6 +25,7 @@ requirements:
         - numpy x.x
         - scipy
         - zlib  # [linux]
+        - pytest
 
 test:
     requires:
