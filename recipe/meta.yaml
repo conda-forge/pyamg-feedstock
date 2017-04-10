@@ -16,6 +16,7 @@ requirements:
     build:
         - python
         - numpy x.x
+        - scipy
         - zlib  # [linux]
         - setuptools
         - pytest
