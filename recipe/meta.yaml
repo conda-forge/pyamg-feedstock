@@ -6,7 +6,7 @@ package:
 
 source:
     url: https://github.com/pyamg/pyamg/archive/v{{ version }}.tar.gz
-    md5: a766393c628c29696d31b3dbbdb6e008
+    md5: 3a10dbf98599f6be17d33161e3afec07
 
 build:
     number: 0
