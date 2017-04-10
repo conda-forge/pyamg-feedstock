@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = "3.2.1" %}
 
 package:
     name: pyamg
@@ -7,7 +7,7 @@ package:
 source:
     fn: pyamg-{{ version }}.tar.gz
     url: https://pypi.python.org/packages/source/p/pyamg/pyamg-{{ version }}.tar.gz
-    md5: bd024253ebae6f7bf2d89fe32fc5d64a
+    md5: a766393c628c29696d31b3dbbdb6e008
 
 build:
     number: 0
