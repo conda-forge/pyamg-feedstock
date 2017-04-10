@@ -18,6 +18,7 @@ requirements:
         - numpy x.x
         - zlib  # [linux]
         - setuptools
+        - pytest
     run:
         - python
         - numpy x.x
