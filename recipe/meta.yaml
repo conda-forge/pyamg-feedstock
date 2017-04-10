@@ -5,11 +5,11 @@ package:
     version: {{ version }}
 
 source:
-    url: https://github.com/pyamg/pyamg/archive/v{{ version }}.tar.gz
-    md5: 3a10dbf98599f6be17d33161e3afec07
+    url: https://pypi.python.org/packages/2d/39/c074c618f605949b6f924f02c654f078cdca95f177d6a38ae1fe0c2f11ca/pyamg-3.2.1.tar.gz
+    md5: a766393c628c29696d31b3dbbdb6e008
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install
 
 requirements:
