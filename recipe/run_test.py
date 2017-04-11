@@ -1,4 +1,4 @@
-import nose
+import pytest
 import sys
 
 print("sys.platform = ", sys.platform)
@@ -13,5 +13,4 @@ elif sys.platform == 'darwin' and sys.version.startswith('2.7'):
     print("!!! There are known failures in pyamg 3.0.2 on Python 2.7 / OSX")
     print("!!! See https://github.com/pyamg/pyamg/issues/165")
 else:
-    config = nose.config.Config(verbosity=2)
-    nose.runmodule('pyamg', config=config)
+    pytest.main(['-v', 'pyamg'])
