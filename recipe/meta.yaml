@@ -1,12 +1,12 @@
-{% set version = "3.2.1" %}
+{% set version = "3.3.2" %}
 
 package:
     name: pyamg
     version: {{ version }}
 
 source:
-    url: https://pypi.python.org/packages/2d/39/c074c618f605949b6f924f02c654f078cdca95f177d6a38ae1fe0c2f11ca/pyamg-3.2.1.tar.gz
-    md5: a766393c628c29696d31b3dbbdb6e008
+    url: https://pypi.python.org/packages/68/b4/dec7df885abef3c92914ab7cb20efb8528f17764e91f9deb24d9cc029c80/pyamg-3.3.2.tar.gz
+    md5: 73d2bccb182e3895ce2d07c65f8fe27e
 
 build:
     number: 0
