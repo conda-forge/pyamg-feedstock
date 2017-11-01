@@ -23,7 +23,6 @@ requirements:
         - numpy >=1.11
         - scipy
         - zlib  # [linux]
-        - pytest
 
 test:
     requires:
