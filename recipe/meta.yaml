@@ -15,12 +15,12 @@ build:
 requirements:
     build:
         - python
-        - numpy x.x
+        - numpy 1.11
         - zlib  # [linux]
         - setuptools
     run:
         - python
-        - numpy x.x
+        - numpy >=1.11
         - scipy
         - zlib  # [linux]
         - pytest
