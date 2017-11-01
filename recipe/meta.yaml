@@ -5,7 +5,7 @@ package:
     version: {{ version }}
 
 source:
-    url: https://pypi.python.org/packages/68/b4/dec7df885abef3c92914ab7cb20efb8528f17764e91f9deb24d9cc029c80/pyamg-3.3.2.tar.gz
+    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     md5: 73d2bccb182e3895ce2d07c65f8fe27e
 
 build:
