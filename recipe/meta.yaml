@@ -1,12 +1,13 @@
-{% set version = "3.2.1" %}
+{% set name = "pyamg" %}
+{% set version = "3.3.2" %}
 
 package:
-    name: pyamg
+    name: {{ name }}
     version: {{ version }}
 
 source:
-    url: https://pypi.python.org/packages/2d/39/c074c618f605949b6f924f02c654f078cdca95f177d6a38ae1fe0c2f11ca/pyamg-3.2.1.tar.gz
-    md5: a766393c628c29696d31b3dbbdb6e008
+    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: ccebb1b0379cab87b493e8e5fc5388c89b9738445ae10e5adfebe6f48078ca27
 
 build:
     number: 0
@@ -15,15 +16,12 @@ build:
 requirements:
     build:
         - python
-        - numpy x.x
-        - zlib  # [linux]
+        - numpy 1.11.*
         - setuptools
     run:
         - python
-        - numpy x.x
+        - numpy >=1.11
         - scipy
-        - zlib  # [linux]
-        - pytest
 
 test:
     requires:
