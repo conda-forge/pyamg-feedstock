@@ -1,3 +1,4 @@
+{% set name = "pyamg" %}
 {% set version = "3.3.2" %}
 
 package:
