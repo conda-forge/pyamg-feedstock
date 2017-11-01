@@ -16,13 +16,11 @@ requirements:
     build:
         - python
         - numpy 1.11
-        - zlib  # [linux]
         - setuptools
     run:
         - python
         - numpy >=1.11
         - scipy
-        - zlib  # [linux]
 
 test:
     requires:
