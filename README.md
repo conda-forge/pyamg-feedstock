@@ -1,7 +1,7 @@
 About pyamg
 ===========
 
-Home: http://www.pyamg.org/
+Home: https://github.com/pyamg/pyamg
 
 Package license: MIT
 
