@@ -1,5 +1,5 @@
 {% set name = "pyamg" %}
-{% set version = "3.3.2" %}
+{% set version = "4.0.0" %}
 
 package:
     name: {{ name }}
