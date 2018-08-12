@@ -1,7 +1,7 @@
 About pyamg
 ===========
 
-Home: http://www.pyamg.org/
+Home: https://github.com/pyamg/pyamg
 
 Package license: MIT
 
@@ -14,14 +14,16 @@ Summary: Algebraic Multigrid Solvers in Python
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyamg-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyamg-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyamg-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyamg-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyamg-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyamg-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pyamg-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pyamg-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pyamg-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pyamg-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pyamg-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pyamg-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyamg/badges/version.svg)](https://anaconda.org/conda-forge/pyamg)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyamg/badges/downloads.svg)](https://anaconda.org/conda-forge/pyamg)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyamg-green.svg)](https://anaconda.org/conda-forge/pyamg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyamg.svg)](https://anaconda.org/conda-forge/pyamg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyamg.svg)](https://anaconda.org/conda-forge/pyamg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyamg.svg)](https://anaconda.org/conda-forge/pyamg) |
 
 Installing pyamg
 ================
