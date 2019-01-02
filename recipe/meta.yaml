@@ -13,6 +13,7 @@ build:
     number: 1000
     script: "{{ PYTHON }} -m pip install . -vv"
     skip: True   # [win and vc<14]
+    skip: True   # [osx and c_compiler == 'toolchain_c']
 
 requirements:
     build:
