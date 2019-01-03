@@ -10,9 +10,10 @@ source:
     sha256: 3ceb38ffd86e29774e759486f2961599c8ed847459c68727493cadeaf115a38a
 
 build:
-    number: 0
-    script: python -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+    number: 1000
+    script: "{{ PYTHON }} -m pip install . -vv"
     skip: True   # [win and vc<14]
+    skip: True   # [osx and c_compiler == 'toolchain_c']
 
 requirements:
     build:
@@ -24,8 +25,8 @@ requirements:
         - setuptools
         - pip
     run:
-        - python
         - {{ pin_compatible("numpy") }}
+        - python
         - scipy
 
 test:
