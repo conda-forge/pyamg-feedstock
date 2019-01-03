@@ -20,8 +20,6 @@ requirements:
         - {{ pin_compatible("numpy") }}
         - {{ compiler('cxx') }}
     host:
-        - {{ compiler('cxx') }}
-    host:
         - python
         - numpy
         - pybind11
