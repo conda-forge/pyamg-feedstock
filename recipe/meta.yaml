@@ -17,7 +17,6 @@ build:
 
 requirements:
     build:
-        - {{ pin_compatible("numpy") }}
         - {{ compiler('cxx') }}
     host:
         - python
@@ -26,6 +25,7 @@ requirements:
         - setuptools
         - pip
     run:
+        - {{ pin_compatible("numpy") }}
         - python
         - scipy
 
