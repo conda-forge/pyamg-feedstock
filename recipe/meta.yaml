@@ -33,6 +33,10 @@ test:
         - pytest
     imports:
         - pyamg
+    commands:
+        # test output exceeds Travis log length limit
+        - pytest ${SP_DIR}/pyamg > /tmp/pytest.out || cat /tmp/pytest.out  # [unix]
+        - pytest %SP_DIR%\pyamg  # [win]
 
 about:
     home: https://github.com/pyamg/pyamg
