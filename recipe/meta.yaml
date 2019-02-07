@@ -10,10 +10,9 @@ source:
     sha256: 3ceb38ffd86e29774e759486f2961599c8ed847459c68727493cadeaf115a38a
 
 build:
-    number: 1000
-    script: "{{ PYTHON }} -m pip install . -vv"
+    number: 1001
+    script: "{{ PYTHON }} -m pip install --no-deps . -vv"
     skip: True   # [win and vc<14]
-    skip: True   # [osx and c_compiler == 'toolchain_c']
 
 requirements:
     build:
