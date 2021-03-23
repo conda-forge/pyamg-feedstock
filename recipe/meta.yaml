@@ -8,9 +8,11 @@ package:
 source:
     url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: 3ceb38ffd86e29774e759486f2961599c8ed847459c68727493cadeaf115a38a
+    patches:
+        - 0001-remove-unneeded-requirement.patch
 
 build:
-    number: 1003
+    number: 1004
     script: "{{ PYTHON }} -m pip install --no-deps . -vv"
     skip: True   # [win and vc<14]
 
@@ -31,8 +33,11 @@ requirements:
 test:
     requires:
         - pytest
+        - pip
     imports:
         - pyamg
+    commands:
+        - pip check
 
 about:
     home: https://github.com/pyamg/pyamg
@@ -44,3 +49,4 @@ extra:
   recipe-maintainers:
     - jakevdp
     - lukeolson
+    - xylar
