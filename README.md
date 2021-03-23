@@ -226,4 +226,5 @@ Feedstock Maintainers
 
 * [@jakevdp](https://github.com/jakevdp/)
 * [@lukeolson](https://github.com/lukeolson/)
+* [@xylar](https://github.com/xylar/)
 
