@@ -1,49 +1,49 @@
 {% set name = "pyamg" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 3ceb38ffd86e29774e759486f2961599c8ed847459c68727493cadeaf115a38a
-    patches:
-        - 0001-remove-unneeded-requirement.patch
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b4cacfcfd13379762a4551ac059a2e52a093b476ca1ad44b9202e736490a8863
+  patches:
+    - 0001-remove-unneeded-requirement.patch
 
 build:
-    number: 1004
-    script: "{{ PYTHON }} -m pip install --no-deps . -vv"
-    skip: True   # [win and vc<14]
+  number: 0
+  script: {{ PYTHON }} -m pip install --no-deps . -vv
+  skip: true  # [win and vc<14]
 
 requirements:
-    build:
-        - {{ compiler('cxx') }}
-    host:
-        - python
-        - numpy
-        - pybind11
-        - setuptools
-        - pip
-    run:
-        - {{ pin_compatible("numpy") }}
-        - python
-        - scipy
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - numpy
+    - pybind11
+    - setuptools
+    - pip
+  run:
+    - {{ pin_compatible("numpy") }}
+    - python
+    - scipy
 
 test:
-    requires:
-        - pytest
-        - pip
-    imports:
-        - pyamg
-    commands:
-        - pip check
+  requires:
+    - pytest
+    - pip
+  imports:
+    - pyamg
+  commands:
+    - pip check
 
 about:
-    home: https://github.com/pyamg/pyamg
-    license: MIT
-    license_file: LICENSE.txt
-    summary: "Algebraic Multigrid Solvers in Python"
+  home: https://github.com/pyamg/pyamg
+  license: MIT
+  license_file: LICENSE.txt
+  summary: Algebraic Multigrid Solvers in Python
 
 extra:
   recipe-maintainers:
