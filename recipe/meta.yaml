@@ -23,12 +23,14 @@ requirements:
     - python
     - numpy
     - pybind11
-    - setuptools
+    - setuptools_scm
+    # setuptools_scm[toml] requires:
+    - setuptools >=42
     - pip
   run:
     - {{ pin_compatible("numpy") }}
     - python
-    - scipy
+    - scipy >=0.12.0
 
 test:
   requires:
