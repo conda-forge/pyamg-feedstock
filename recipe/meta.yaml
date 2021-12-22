@@ -1,5 +1,5 @@
 {% set name = "pyamg" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b4cacfcfd13379762a4551ac059a2e52a093b476ca1ad44b9202e736490a8863
+  sha256: 48d9be622049d8363cda84125c45d18b89e0ab7d99be5a93c0246f375ebad344
   patches:
     - 0001-remove-unneeded-requirement.patch
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps . -vv
   skip: true  # [win and vc<14]
 
@@ -23,12 +23,14 @@ requirements:
     - python
     - numpy
     - pybind11
-    - setuptools
+    - setuptools_scm
+    # setuptools_scm[toml] requires:
+    - setuptools >=42
     - pip
   run:
     - {{ pin_compatible("numpy") }}
     - python
-    - scipy
+    - scipy >=0.12.0
 
 test:
   requires:
