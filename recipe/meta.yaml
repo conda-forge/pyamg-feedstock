@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e0845fdd4b96fc45cbd04f5a6ff4a1b9bfd671ad69ef80898431c8d03b75ad6d
+  sha256: 9adac5a94c04bacb58942702895d454199bb7492a886eeb9d311dd88d83a0fa1
   patches:
     - 0001-remove-unneeded-requirement.patch
 
