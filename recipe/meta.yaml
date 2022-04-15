@@ -1,5 +1,5 @@
 {% set name = "pyamg" %}
-{% set version = "4.2.2" %}
+{% set version = "4.2.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9adac5a94c04bacb58942702895d454199bb7492a886eeb9d311dd88d83a0fa1
+  sha256: 37ad3c1dcaff2435c2ab7c8ec36942af0726c563d35059bcd18eb07473f7182e
   patches:
     - 0001-remove-unneeded-requirement.patch
 
