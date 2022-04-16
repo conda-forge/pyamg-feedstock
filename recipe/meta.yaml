@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 37ad3c1dcaff2435c2ab7c8ec36942af0726c563d35059bcd18eb07473f7182e
-  patches:
-    - 0001-remove-unneeded-requirement.patch
 
 build:
   number: 0
@@ -34,7 +32,6 @@ requirements:
 
 test:
   requires:
-    - pytest
     - pip
   imports:
     - pyamg
