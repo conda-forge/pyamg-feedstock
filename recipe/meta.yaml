@@ -33,6 +33,7 @@ requirements:
 test:
   requires:
     - pip
+    - pytest
   imports:
     - pyamg
   commands:
