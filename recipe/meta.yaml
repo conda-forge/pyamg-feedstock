@@ -24,9 +24,9 @@ requirements:
   host:
     - python
     - numpy
-    - pybind11
-    - setuptools_scm
-    # setuptools_scm[toml] requires:
+    - pybind11 >=2.8.0
+    - setuptools_scm >=7.0.0
+    # explicit requirement and also required by setuptools_scm[toml]:
     - setuptools >=42
     - pip
   run:
