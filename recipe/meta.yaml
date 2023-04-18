@@ -1,5 +1,5 @@
 {% set name = "pyamg" %}
-{% set version = "4.2.3" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 37ad3c1dcaff2435c2ab7c8ec36942af0726c563d35059bcd18eb07473f7182e
+  sha256: eab967228f614342ce23c7b4d6bbca25ad8b927a45cb7626d1ef17c9f062a02e
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps . -vv
   skip: true  # [win and vc<14]
 
@@ -24,9 +24,9 @@ requirements:
   host:
     - python
     - numpy
-    - pybind11
-    - setuptools_scm
-    # setuptools_scm[toml] requires:
+    - pybind11 >=2.8.0
+    - setuptools_scm >=7.0.0
+    # explicit requirement and also required by setuptools_scm[toml]:
     - setuptools >=42
     - pip
   run:
