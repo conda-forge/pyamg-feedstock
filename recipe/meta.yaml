@@ -1,5 +1,5 @@
 {% set name = "pyamg" %}
-{% set version = "5.0.0" %}
+{% set version = "5.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eab967228f614342ce23c7b4d6bbca25ad8b927a45cb7626d1ef17c9f062a02e
+  sha256: 5f048a01743343ae0d4c862306007386cfb9b14453c47adfdad277eb79a46d50
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps . -vv
-  skip: true  # [win and vc<14]
 
 requirements:
   build:
