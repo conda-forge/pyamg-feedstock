@@ -10,7 +10,7 @@ source:
   sha256: f90f9de795b4e29589edd2eb446d11ddb466678ebe823ed329fcf35759ea390c
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps . -vv
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - numpy
@@ -29,7 +30,6 @@ requirements:
     - setuptools >=42
     - pip
   run:
-    - {{ pin_compatible("numpy") }}
     - python
     - scipy >=1.8.0
 
