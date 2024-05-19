@@ -17,13 +17,13 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy <2                               # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
     - python
-    - numpy <2
+    - numpy
     - pybind11 >=2.8.0
     - setuptools_scm >=7.0.0
     # explicit requirement and also required by setuptools_scm[toml]:
@@ -31,6 +31,7 @@ requirements:
     - pip
   run:
     - python
+    - numpy <2
     - scipy >=1.8.0
 
 test:
