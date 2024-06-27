@@ -31,7 +31,7 @@ requirements:
     - pip
   run:
     - python
-    - scipy >=1.8.0
+    - scipy >=1.11.0
 
 test:
   requires:
