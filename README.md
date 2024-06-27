@@ -404,6 +404,3 @@ Feedstock Maintainers
 * [@lukeolson](https://github.com/lukeolson/)
 * [@xylar](https://github.com/xylar/)
 
-
-<!-- dummy commit to enable rerendering -->
-
