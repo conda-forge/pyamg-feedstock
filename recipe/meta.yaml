@@ -11,8 +11,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [py<39]
-  script: {{ PYTHON }} -m pip install --no-deps . -vv
+  script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
 
 requirements:
   build:
