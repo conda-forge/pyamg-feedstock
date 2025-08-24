@@ -28,6 +28,7 @@ requirements:
     - setuptools-scm ==8.3.0
     # explicit requirement and also required by setuptools_scm[toml]:
     - setuptools >=42
+    - scipy >=1.11.0
     - pip
   run:
     - python
