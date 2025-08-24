@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyamg-{{ version }}.tar.gz
   sha256: 5323d0f1a4cd999be246a90d580c9e1e9b584b98887f6298d397611087ef860b
 
 build:
@@ -24,8 +24,8 @@ requirements:
   host:
     - python
     - numpy
-    - pybind11 >=2.12.0
-    - setuptools_scm >=7.0.0
+    - pybind11 >=2.8.0
+    - setuptools-scm ==8.3.0
     # explicit requirement and also required by setuptools_scm[toml]:
     - setuptools >=42
     - pip
