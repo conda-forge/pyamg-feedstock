@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: pyamg
+  version: "5.4.0"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pyamg-${{ version }}.tar.gz
+  sha256: eb45632b907dd626a65f094ca7a4d2cabeab324e0b77a6d257b95fabb7f0bb54
+
+build:
+  number: 0
+  script: ${{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - if: build_platform != target_platform
+      then: numpy
+    - if: build_platform != target_platform
+      then: pybind11
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+  host:
+    - python
+    - numpy
+    - pybind11 >=2.8.0
+    - setuptools-scm ==8.3.0
+    # explicit requirement and also required by setuptools_scm[toml]:
+    - setuptools >=42
+    - scipy >=1.11.0
+    - pip
+  run:
+    - python
+    - numpy >=1.23.5
+    - scipy >=1.15.0
+
+tests:
+  - python:
+      imports:
+        - pyamg
+      pip_check: true
+
+about:
+  license: MIT
+  license_file: LICENSE.txt
+  summary: Algebraic Multigrid Solvers in Python
+  homepage: https://github.com/pyamg/pyamg
+
+extra:
+  recipe-maintainers:
+    - jakevdp
+    - lukeolson
+    - xylar
