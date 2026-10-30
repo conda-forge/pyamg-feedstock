@@ -1,5 +1,5 @@
 {% set name = "pyamg" %}
-{% set version = "5.3.0" %}
+{% set version = "5.4.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pyamg-{{ version }}.tar.gz
-  sha256: 5323d0f1a4cd999be246a90d580c9e1e9b584b98887f6298d397611087ef860b
+  sha256: eb45632b907dd626a65f094ca7a4d2cabeab324e0b77a6d257b95fabb7f0bb54
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
 
 requirements:
@@ -32,8 +32,8 @@ requirements:
     - pip
   run:
     - python
-    - numpy
-    - scipy >=1.11.0
+    - numpy >=1.23.5
+    - scipy >=1.15.0
 
 test:
   requires:
