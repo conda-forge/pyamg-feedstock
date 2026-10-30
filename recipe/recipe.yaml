@@ -19,13 +19,11 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: numpy
-    - if: build_platform != target_platform
-      then: pybind11
+      then: 
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
+        - pybind11
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
   host:
