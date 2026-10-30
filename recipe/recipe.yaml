@@ -44,6 +44,14 @@ tests:
       imports:
         - pyamg
       pip_check: true
+  - script:
+      - python run_test.py
+    files:
+      recipe:
+        - run_test.py
+    requirements:
+      run:
+        - pytest
 
 about:
   license: MIT
