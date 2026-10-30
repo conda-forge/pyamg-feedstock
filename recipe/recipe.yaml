@@ -30,13 +30,16 @@ requirements:
     - ${{ stdlib("c") }}
   host:
     - python
+    - pip
+    - meson-python
+    - pybind11 >=2.12.0,<4.0.0a0
     - numpy
-    - pybind11 >=2.8.0
-    - setuptools-scm ==8.3.0
+    - wheel
+    - versioningit
+    - scipy >=1.11.0
     # explicit requirement and also required by setuptools_scm[toml]:
     - setuptools >=42
-    - scipy >=1.11.0
-    - pip
+    - setuptools-scm ==8.3.0
   run:
     - python
     - numpy >=1.23.5
