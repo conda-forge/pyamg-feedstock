@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyamg
-  version: "5.4.0"
+  version: "5.4.1"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pyamg-${{ version }}.tar.gz
-  sha256: eb45632b907dd626a65f094ca7a4d2cabeab324e0b77a6d257b95fabb7f0bb54
+  sha256: b5829ce39687655ce68db4415c93ee171056bb4e41e7b798ef4e6e9f9f93beae
 
 build:
   number: 0
@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - cross-python_${{ target_platform }}
         - numpy
